@@ -1,0 +1,3 @@
+[submodule "themes/yilia"]
+	path = themes/yilia
+	url = ssh://git@github.com/weishen/hexo-theme-yilia.git
