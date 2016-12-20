@@ -6,14 +6,18 @@
 title: Hexo
 subtitle:
 description:
-author: John Doe
+author: Wei Shen
 language:
 timezone:
 
+port: 80
+server_ip: 0.0.0.0
+logger: false
+logger_format:
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
-root: /
+url: http://weishen.github.io
+root: /public
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -68,4 +72,6 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: github
+  repository: https://github.com/weishen/weishen.github.io.git
+  branch: master
