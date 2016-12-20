@@ -7,8 +7,9 @@ title: Hexo
 subtitle:
 description:
 author: Wei Shen
-language:
-timezone:
+language: zh_CN.utf-8
+timezone: Asia/Shanghai
+keywords: "80后,老男孩,编程爱好者"
 
 port: 80
 server_ip: 0.0.0.0
@@ -17,7 +18,7 @@ logger_format:
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://weishen.github.io
-root: /public
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -64,14 +65,45 @@ time_format: HH:mm:ss
 per_page: 10
 pagination_dir: page
 
+feed:
+  type: atom
+  path: atom.xml
+  limit: 100
+share_jia: true
+duoshuo_shortname: shenwei5566
+Plugins:
+  - hexo-generator-feed
+  - hexo-generator-sitemap
+
+
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: true
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: false
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+# theme: landscape
+theme: yilia
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: github
-  repository: https://github.com/weishen/weishen.github.io.git
+  type: git
+  repository: ssh://git@github.com/weishen/weishen.github.io.git
   branch: master
